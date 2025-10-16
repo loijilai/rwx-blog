@@ -1,7 +1,12 @@
 ---
-title: 歡迎來到我的網站
+title: Lai's blog
 publish: true
 tags:
 ---
+歡迎來到我的個人網站，目前主要有兩個區塊
 
-這裡記錄一些雜思和技術筆記
+# [[Reflections/]]
+紀錄一些雜思
+
+# [[Tech Notes/]]
+技術學習筆記
