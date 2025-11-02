@@ -22,7 +22,7 @@ date: 2025-10-16
 6. 子彈思考整理術 by Ryder Carroll ❤️  
    * 因為這本書開始手寫日記，超療癒，提供Index的方法，就算日記很亂還是能找到筆記在哪裡
    * Migration這個概念對我來說很新，但真的每次migration都會有新想法，提醒自己有些重要的願望應該要去做
-1. 非暴力溝通 by Marshall Rosenberg
+1. [[非暴力溝通]] by Marshall Rosenberg
 2. 身為自己 by Anil Seth  
    * 把知覺的predictive processing用於意識研究，指出我們每個人都活在自己建構的世界裡，很震撼 
    * 我的思考紀錄：[[我們是如何理解世界的？]] & [[感知他人，建構自己]]. 
