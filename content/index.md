@@ -13,3 +13,5 @@ tags:
 
 # [[Tech Notes/]]
 技術學習筆記
+
+# [[Learning Interesting Things]]

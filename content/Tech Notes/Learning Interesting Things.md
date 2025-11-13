@@ -1,0 +1,15 @@
+---
+publish: true
+tags:
+date:
+---
+突然有一個想法：為什麼不把我學東西的過程紀錄下來？
+
+把這些學習紀錄公開，如果有人對這些主題有興趣，或許有這些經驗參考會有點幫助。
+
+1. 2025 7-8月   [[Web 前端學習紀錄]]
+2. 2025 9-10月  
+   這段時間比較忙，只有做了兩個小專案，就沒有特別紀錄。不過是第一次知道Api、資料庫、資料驗證、容器化、雲端部署這些東西到底在講什麼
+   * [loijilai/Python-Chat-Room: A secure, multi-threaded Python chat application with a Tkinter UI, SQLite authentication, and JSON-based client–server communication. (github.com)](https://github.com/loijilai/Python-Chat-Room)
+   * [loijilai/Order-Insight: 以PDF訂單為輸入的資料平台，自動化資料抽取、入庫並用FastAPI提供前端視覺化 (github.com)](https://github.com/loijilai/Order-Insight)
+1. 2025 11月   [[C sharp後端學習紀錄]]
