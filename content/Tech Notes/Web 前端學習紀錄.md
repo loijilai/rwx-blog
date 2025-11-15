@@ -14,7 +14,7 @@ date:
 
 ## Bottom-up的學習模式
 
-我最近在思考學習寫程式，通常都是從書本、課堂、線上課開始，也就是由基礎到做專案這種”bottom-up”的線性學習路徑非常不適合我，原因是：
+我最近在思考學習寫程式，過去都是從書本、課堂、線上課開始，也就是由基礎到做專案這種”bottom-up”的線性學習路徑。但我發現這種學習方式非常不適合我，原因是：
 
 1. 上線上課時，我常常淹沒在大量資訊中，不知道重點是什麼，最後都記不太起來，原因是在我遇到真正的問題前，所有的資訊似乎都沒辦法在我頭腦裡留下印象
 2. 這些學習路徑雖然每個階段都劃分清楚，像是先學會某個技術、再進入下一個技術，但是心中缺乏一個大的地圖，導致很容易在每個階段停留過久，甚至迷失在細節裡
@@ -23,7 +23,7 @@ date:
 
 ## Top-down的學習模式
 
-於是我調整策略，直接從做中學，也就是”top-down”的學習路徑比較適合我，這種方式就是直接做自己想要做出的軟體，然後在中間補齊需要用到的知識。
+於是我調整策略，發現直接從做中學，也就是”top-down”的學習路徑比較適合我，這種方式就是直接做自己想要做出的軟體，然後在中間補齊需要用到的知識。
 
 然而結果卻沒有想像中好，更像是直接撞上一個很高的峭壁，原因是：
 
@@ -92,7 +92,7 @@ https://www.youtube.com/watch?v=32M1al-Y6Ag&ab_channel=TraversyMedia
 
 [Node.js — Introduction to Node.js (nodejs.org)](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
 
-TailwindCSS
+前端可補TailwindCSS
 
 PERN stack [PERN Stack Course: Build a Product Store with Postgres & React (youtube.com)](https://www.youtube.com/watch?v=lx3YJj0nJVk&ab_channel=Codesistency)
 
@@ -106,6 +106,6 @@ Traversary media: MERN stack
 
 在過程中會懷疑自己是不是學太慢了，但有很多資源可以提醒我能夠怎麼調整。像是[How To Learn A New Programming Language (youtube.com)](https://www.youtube.com/watch?v=E8cM12jRH7k))提到的方式：documentation/advent of code → websocket server (socket, std lib, 3rd library, async) → Larger patterns and scales (interpreter)。
 
-一開始什麼都不會很煩躁，但值得鼓勵的是，當自己能力成長，解決問題的方法也變多了，反而是一開始什麼都不懂時poke around的焦躁是最痛苦的，如果實力真的有提升，其實也有越學越痛苦的感覺，反而會因為進步而看到的新風景感到雀躍，就像是爬山一樣。
+一開始什麼都不會很煩躁，但值得鼓勵的是，當自己能力成長，解決問題的方法也變多了，反而是一開始什麼都不懂時poke around的焦躁是最痛苦的，如果實力真的有提升，其實也沒有越學越痛苦的感覺，反而會因為進步而看到新的風景感到雀躍，就像是爬山一樣。
 
 回想自己小時候學除法是痛苦的，但隨著能力增長就覺得沒這麼複雜了，正如同如今還是有很多複雜的東西要學習，但當學會之後又沒有一開始想得這麼困難。

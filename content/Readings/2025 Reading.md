@@ -7,8 +7,7 @@ date: 2025-10-16
  
 # Current reading
 1. 逃避自由 by Erich Fromm
-2. [[精神健康中醫講堂]] by 李辛
-3. 快思慢想 by Daniel Kahneman
+2. 快思慢想 by Daniel Kahneman
 
 # Finish
  
@@ -34,7 +33,4 @@ date: 2025-10-16
 9. [[反脆弱]] by Nassim Nicholas Taleb ❤️  
    * 2025最愛，從對報酬不對稱的觀察，帶出一種面對隨機性的態度和方法
    * 我還做了個模擬： [loijilai/Antifragile-Simulation (github.com)](https://github.com/loijilai/Antifragile-Simulation)
-
- 
-
-
+1. [[精神健康中醫講堂]] by 李辛
