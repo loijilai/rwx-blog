@@ -13,12 +13,14 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+      provider: "umami",
+      host: "https://cloud.umami.is",
+      websiteId: "3c0da312-4945-4eb8-8c19-94e8930ddcd7",
     },
     locale: "zh-TW",
     baseUrl: "loijilai.github.io",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "modified",
+    defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,

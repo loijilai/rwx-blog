@@ -3,23 +3,42 @@ publish: true
 tags:
 date:
 ---
+# TODO
+[[JWT 驗證與授權]]
+[[Rest API design]]
+[[Error handling的原則]]
+
 # 學習內容
 1. C# basic  
-   https://youtu.be/GhQdlIFylQ8?si=cr4g7qeQs-98qtFv
+	[[null 合併運算子]]
+	https://youtu.be/GhQdlIFylQ8?si=cr4g7qeQs-98qtFv
 2. ASP.NET Core  
    [ASP.NET Core Full Course For Beginners (youtube.com)](https://www.youtube.com/watch?v=AhAxLiGC7Pc)
-	1. middleware
-	2. dependency injection
+	1. Middleware
+	2. [[Dependency injection]]
 	3. controller & 基本的api routing design
-	4. 如何讀取appsettings.json
-	5. app architecture: controller, services, repository
-3. SQL server & EF core
-4. docker & docker compose  
+	4. 如何讀取appsettings.json 關鍵字: Option pattern
+		* App configuration，按照由低到高的優先順序：appsetting.json -> appsetting.Development.json -> launchSetting.json -> environment variable -> command line arguments
+		* 注意launchSetting只有在本地開發才會用到，他是執行dotnet run時的一些設定，不會真正在production environment被帶上
+		* environment variable的部分，在容器化的階段可以在docker file中用ENV帶入
+3. Api design, architecture: controller, services, repository
+	* [[Rest API design]] 
+	* [[Error handling的原則]]
+
+4. SQL server & EF core
+	* LINQ最基本的重要觀念：
+		1. Deferred execution
+		   e.g. 就算tracks是List，寫tracks.Select(t => t.ToDto())會變成IEnumerable而非List，除非最後加上.ToList()
+		2. IEnumerable (在memory中）vs. IQueryable（會實際轉換成DB query）
+		3. LINQ主要用於查詢的Query居多，像是where, select, order by, first/firstOrDefault, any, tolist
+		4. 如果要update, create, delete就要用到LINQ之餘的Add, Remove + saveChangesAsync() 這些不是IQueryable，是DbSet的操作介面。有時候兩種方法都可以做到同一件事情，像是var problem = context.Problems.FindAsync(id) vs. var problem = context.Problems.FirstorDefaultAsync(p => p.id == id)，這時候優先會選擇前者，FindAsync雖然不是IQueryable提供，但是他是專門用來查詢primary key的，而且可以利用ef core的change tracker直接回傳不用查詢DB
+5. Docker & Docker compose  
    https://youtu.be/SXwC9fSwct8?si=7WOcEntMdszmEbLd  
-   困難點：服務之間啟用的dependency、環境變數、volumn與network設定
-5. Unit testing (xUnit + Moq)  
-   困難點：如果沒有對app做分層，會很難測試。通常正確的單元測試會集中在service的部分，但我卻讓controller直接取得資料庫
-6. Kubernetes  
+   困難點：服務之間啟用的dependency、用環境變數覆蓋appsetting、volumn與network設定(服務內部溝通要用內部網路的service name和port溝通，而不是windows/mac上面的port)
+6. Unit testing (xUnit + Moq)  
+   * 困難點：如果沒有對app做分層，會很難測試，正確的單元測試會集中在service的部分
+   * [[為什麼要寫測試？]]
+1. Kubernetes  
    [Kubernetes Crash Course for Absolute Beginners [NEW] (youtube.com)](https://www.youtube.com/watch?v=s_o8dwzRlu4)  
    困難點：  
    * 理解每個k8s components在做什麼？secret, configmap, deployment, services
@@ -38,11 +57,12 @@ date:
 	   	2. Distributed tracing: Opentelemetry + Jaeger
 	   	3. Metrics: Prometheus + Grafana
 1. [Git/GitHub/GitLab完全教程（包括Git底层原理） | Udemy](https://www.udemy.com/course/git-basic/?couponCode=KEEPLEARNING)
+2. [[JWT 驗證與授權]]
 
 
 # 困難點
 1. DB design (constraint, index)
-2. API design (naming, error handling)
+2. Api design, architecture: controller, services, repository （上面的第三點）
 3. 框架的運作原理  
    我大致上知道用某些code可以設定某些功能，但我不太懂框架到底是怎麼運作的，導致我寫不出這些code。基本上只是框架的user，我想要學習更底層的東西該怎麼做。舉個比較specific的例子，我不知道這段code背後是怎麼運作的，只知道我這樣設定就會這些功能
    ```csharp
@@ -54,3 +74,7 @@ date:
 	      .WithTracing(builder => builder.AddConsoleExporter()) 
 	      .WithMetrics(builder => builder.AddConsoleExporter());
    ```
+
+# 學習方法調整
+
+1. 先混亂再整理：模仿 -> 實作 -> 發現規則 -> 理解，而非理解 -> 實作
