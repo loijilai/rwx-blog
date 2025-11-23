@@ -18,7 +18,7 @@ const config: QuartzConfig = {
       websiteId: "3c0da312-4945-4eb8-8c19-94e8930ddcd7",
     },
     locale: "zh-TW",
-    baseUrl: "loijilai.github.io",
+    baseUrl: "loijilai.site",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
