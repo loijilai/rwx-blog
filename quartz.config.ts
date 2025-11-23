@@ -20,7 +20,7 @@ const config: QuartzConfig = {
     locale: "zh-TW",
     baseUrl: "loijilai.github.io",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "created",
+    defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
