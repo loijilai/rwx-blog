@@ -5,6 +5,7 @@ tags:
 date: 2025-10-16
 ---
  
+我閱讀的方向就是自己當前最感興趣的主題，這些是我探索的紀錄。
 # Current reading
 1. 逃避自由 by Erich Fromm
 2. 快思慢想 by Daniel Kahneman
@@ -34,3 +35,6 @@ date: 2025-10-16
    * 2025最愛，從對報酬不對稱的觀察，帶出一種面對隨機性的態度和方法
    * 我還做了個模擬： [loijilai/Antifragile-Simulation (github.com)](https://github.com/loijilai/Antifragile-Simulation)
 1. [[精神健康中醫講堂]] by 李辛
+2. 影像的追尋 by 張照堂
+3. 木村伊兵衛
+	* [[閱讀寫實攝影的反思]]

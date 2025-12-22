@@ -1,5 +1,5 @@
 ---
-publish: true
+publish: false
 tags:
 date:
 ---
@@ -7,20 +7,21 @@ date:
 [[JWT 驗證與授權]]
 [[Rest API design]]
 [[Error handling的原則]]
+[[Result pattern]]
 
-# 學習內容
+# 基礎學習內容
+
+以下是我用C#和Asp.Net core進行後端開發的學習紀錄。
+
 1. C# basic  
-	[[null 合併運算子]]
-	https://youtu.be/GhQdlIFylQ8?si=cr4g7qeQs-98qtFv
+	* [[null 合併運算子]]
+	* https://youtu.be/GhQdlIFylQ8?si=cr4g7qeQs-98qtFv
 2. ASP.NET Core  
    [ASP.NET Core Full Course For Beginners (youtube.com)](https://www.youtube.com/watch?v=AhAxLiGC7Pc)
 	1. Middleware
 	2. [[Dependency injection]]
 	3. controller & 基本的api routing design
-	4. 如何讀取appsettings.json 關鍵字: Option pattern
-		* App configuration，按照由低到高的優先順序：appsetting.json -> appsetting.Development.json -> launchSetting.json -> environment variable -> command line arguments
-		* 注意launchSetting只有在本地開發才會用到，他是執行dotnet run時的一些設定，不會真正在production environment被帶上
-		* environment variable的部分，在容器化的階段可以在docker file中用ENV帶入
+	4. [[如何讀取appsettings.json]]
 3. Api design, architecture: controller, services, repository
 	* [[Rest API design]] 
 	* [[Error handling的原則]]
@@ -56,9 +57,15 @@ date:
 	   	1. Structured logging: Serilog + Seq
 	   	2. Distributed tracing: Opentelemetry + Jaeger
 	   	3. Metrics: Prometheus + Grafana
-1. [Git/GitHub/GitLab完全教程（包括Git底层原理） | Udemy](https://www.udemy.com/course/git-basic/?couponCode=KEEPLEARNING)
-2. [[JWT 驗證與授權]]
+4. [Git/GitHub/GitLab完全教程（包括Git底层原理） | Udemy](https://www.udemy.com/course/git-basic/?couponCode=KEEPLEARNING)
+	* [[Git 訂正本]]
+5. [[JWT 驗證與授權]]
 
+# 實務開發學習內容
+
+1. 當Api A需要呼叫Api B取得資料，就需要用到[[如何使用HttpClient呼叫其他服務]]
+2. [[Result pattern]]
+3. [[GraphQL]]
 
 # 困難點
 1. DB design (constraint, index)
@@ -77,4 +84,8 @@ date:
 
 # 學習方法調整
 
-1. 先混亂再整理：模仿 -> 實作 -> 發現規則 -> 理解，而非理解 -> 實作
+1. 先混亂再整理，而非先理解再實作
+	* 工作以後才發現這種學習模式：模仿 -> 實作 -> 發現規則 -> 理解
+	* 既有的程式庫就是最好的老師，幾乎所有問題都可以找到，像是讀取設定檔、call其他服務要怎麼寫等等
+2. 定期整理gpt的聊天記錄，整理成blog post
+3. 如果學習的內容是觀念，做一個小例子驗證，確保自己能夠教人才算是懂

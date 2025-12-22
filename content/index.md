@@ -11,9 +11,3 @@ tags:
 > ▶️ 入口
 > * [[2025 Reading]] 閱讀紀錄與分享
 > * [[Reflections/]] 思考的紀錄
-> * [[Engineering Handbook]]
-
-
-> 🧠 最近在忙什麼？
-> * [[C sharp後端學習紀錄]]
-
