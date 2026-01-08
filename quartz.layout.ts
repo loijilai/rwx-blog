@@ -1,11 +1,25 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
+import { QuartzPluginData } from "./quartz/plugins/vfile"
+import { isFolderPath } from "./quartz/util/path"
 import * as Component from "./quartz/components"
+
+function recentNotesFilter(data: QuartzPluginData): boolean {
+  return !(data.slug === "index" || isFolderPath(data.slug ?? ""))
+}
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
+    Component.ConditionalRender({
+      component: Component.RecentNotes({
+        limit: 5,
+        showTags: false,
+        filter: recentNotesFilter,
+      }),
+      condition: (page) => page.fileData.slug === "index",
+    }),
     Component.Comments({
       provider: "giscus",
       options: {
@@ -55,7 +69,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer(),
   ],
   right: [
-    // Component.Graph(),
+    Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
