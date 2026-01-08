@@ -1,5 +1,5 @@
 ---
-title: 2025 Reading
+title: Reading
 publish: true
 tags:
 date: 2025-10-16
@@ -9,8 +9,10 @@ date: 2025-10-16
 # Current reading
 1. 逃避自由 by Erich Fromm
 2. 快思慢想 by Daniel Kahneman
+3. 隨機騙局 by Nassim Nicholas Taleb
+4. 血清素鍛鍊法 by 有田秀穗
 
-# Finish
+# 2025
  
  1. 卡片盒筆記法 by Sönke Ahrens ❤️  
 	* 改變我思考和閱讀的方式
@@ -38,3 +40,5 @@ date: 2025-10-16
 2. 影像的追尋 by 張照堂
 3. 木村伊兵衛
 	* [[閱讀寫實攝影的反思]]
+4. [[活出意義來]] by viktor frankl
+5. 四季 by 阮義忠
