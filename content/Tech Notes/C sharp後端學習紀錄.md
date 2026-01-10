@@ -1,5 +1,5 @@
 ---
-publish: false
+publish: true
 tags:
 date:
 ---
@@ -33,7 +33,7 @@ date:
 		2. IEnumerable (在memory中）vs. IQueryable（會實際轉換成DB query）
 		3. LINQ主要用於查詢的Query居多，像是where, select, order by, first/firstOrDefault, any, tolist
 		4. 如果要update, create, delete就要用到LINQ之餘的Add, Remove + saveChangesAsync() 這些不是IQueryable，是DbSet的操作介面。有時候兩種方法都可以做到同一件事情，像是var problem = context.Problems.FindAsync(id) vs. var problem = context.Problems.FirstorDefaultAsync(p => p.id == id)，這時候優先會選擇前者，FindAsync雖然不是IQueryable提供，但是他是專門用來查詢primary key的，而且可以利用ef core的change tracker直接回傳不用查詢DB
-5. Docker & Docker compose  
+5. [[Docker & Docker compose]]  
    https://youtu.be/SXwC9fSwct8?si=7WOcEntMdszmEbLd  
    困難點：服務之間啟用的dependency、用環境變數覆蓋appsetting、volumn與network設定(服務內部溝通要用內部網路的service name和port溝通，而不是windows/mac上面的port)
 6. Unit testing (xUnit + Moq)  

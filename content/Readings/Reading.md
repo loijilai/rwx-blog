@@ -9,7 +9,7 @@ date: 2025-10-16
 # Current reading
 1. 逃避自由 by Erich Fromm
 2. 快思慢想 by Daniel Kahneman
-3. 隨機騙局 by Nassim Nicholas Taleb
+3. [[隨機騙局]] by Nassim Nicholas Taleb
 4. 血清素鍛鍊法 by 有田秀穗
 
 # 2025

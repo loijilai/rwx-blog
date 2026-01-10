@@ -25,7 +25,7 @@ date:
 - [ ] git & source tree
 - [ ] postman
 ## 資料庫
-- [ ] mssql
+- [ ] mssql [https://youtu.be/SSKVgrwhzus?si=Luq0OL3ckEys6JAl](https://youtu.be/SSKVgrwhzus?si=Luq0OL3ckEys6JAl)
 - [ ] SQL server management studio
 - [ ] kafka
 - [ ] mongoDB
