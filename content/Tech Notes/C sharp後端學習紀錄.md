@@ -65,7 +65,7 @@ date:
 
 1. 當Api A需要呼叫Api B取得資料，就需要用到[[如何使用HttpClient呼叫其他服務]]
 2. [[Result pattern]]
-3. [[GraphQL]]
+3. [[GraphQL 核心觀念]]
 
 # 困難點
 1. DB design (constraint, index)

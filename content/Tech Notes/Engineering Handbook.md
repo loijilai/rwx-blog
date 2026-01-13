@@ -31,7 +31,6 @@ date:
 - [ ] mongoDB
 - [ ] redis
 ## 工程素養(設計)
-- [ ] [[GraphQL]]
 - [ ] OpenAPI
 - [ ] [[Csharp Clean Code]]
 	- [ ] OOP & Design pattern
