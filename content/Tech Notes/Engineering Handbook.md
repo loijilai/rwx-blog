@@ -22,7 +22,7 @@ date:
 	- [x] Run docker file
 	- [x] toggle solution explorer
 - [ ] ELK
-- [ ] git & source tree
+- [ ] git & source tree [https://gitbook.tw/](https://gitbook.tw/)
 - [ ] postman
 ## 資料庫
 - [ ] mssql [https://youtu.be/SSKVgrwhzus?si=Luq0OL3ckEys6JAl](https://youtu.be/SSKVgrwhzus?si=Luq0OL3ckEys6JAl)
@@ -31,7 +31,7 @@ date:
 - [ ] mongoDB
 - [ ] redis
 ## 工程素養(設計)
-- [ ] OpenAPI
+- [ ] OpenAPI [https://learn.openapis.org](https://learn.openapis.org/)
 - [ ] [[Csharp Clean Code]]
 	- [ ] OOP & Design pattern
 	- [ ] API design

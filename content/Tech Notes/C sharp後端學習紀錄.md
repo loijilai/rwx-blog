@@ -63,9 +63,20 @@ date:
 
 # 實務開發學習內容
 
+12月-1月
+
 1. 當Api A需要呼叫Api B取得資料，就需要用到[[如何使用HttpClient呼叫其他服務]]
 2. [[Result pattern]]
 3. [[GraphQL 核心觀念]]
+
+Feature
+1. Consume Kafka 並寫入 MongoDB
+2. Redis
+3. 回傳搜尋結果: [[SQL correlated subquery效能優化]], pagination, [[Strategy Pattern：從違反 SOLID 到符合設計原則]]
+
+Deploy
+1. Check DB connection string
+2. Build CI pipeline
 
 # 困難點
 1. DB design (constraint, index)
