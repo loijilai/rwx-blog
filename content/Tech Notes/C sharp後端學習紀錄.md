@@ -6,7 +6,6 @@ date:
 # TODO
 [[JWT 驗證與授權]]
 [[Rest API design]]
-[[Error handling的原則]]
 [[Result pattern]]
 
 # 基礎學習內容
@@ -24,7 +23,7 @@ date:
 	4. [[如何讀取appsettings.json]]
 3. Api design, architecture: controller, services, repository
 	* [[Rest API design]] 
-	* [[Error handling的原則]]
+	* [[異常處理：多層呼叫情境下 try-catch 該放哪裡？]]
 
 4. SQL server & EF core
 	* LINQ最基本的重要觀念：
@@ -33,6 +32,7 @@ date:
 		2. IEnumerable (在memory中）vs. IQueryable（會實際轉換成DB query）
 		3. LINQ主要用於查詢的Query居多，像是where, select, order by, first/firstOrDefault, any, tolist
 		4. 如果要update, create, delete就要用到LINQ之餘的Add, Remove + saveChangesAsync() 這些不是IQueryable，是DbSet的操作介面。有時候兩種方法都可以做到同一件事情，像是var problem = context.Problems.FindAsync(id) vs. var problem = context.Problems.FirstorDefaultAsync(p => p.id == id)，這時候優先會選擇前者，FindAsync雖然不是IQueryable提供，但是他是專門用來查詢primary key的，而且可以利用ef core的change tracker直接回傳不用查詢DB
+	* [[LINQ 練習題]]
 5. [[Docker & Docker compose]]  
    https://youtu.be/SXwC9fSwct8?si=7WOcEntMdszmEbLd  
    困難點：服務之間啟用的dependency、用環境變數覆蓋appsetting、volumn與network設定(服務內部溝通要用內部網路的service name和port溝通，而不是windows/mac上面的port)
@@ -77,6 +77,10 @@ Feature
 Deploy
 1. Check DB connection string
 2. Build CI pipeline
+
+Debug
+1. Logging關鍵點 + try-catch配合運用
+2. Kafka replay + ELK 排查
 
 # 困難點
 1. DB design (constraint, index)
