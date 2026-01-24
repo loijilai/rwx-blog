@@ -1,6 +1,8 @@
 ---
 publish: false
 tags:
+  - csharp
+  - design-pattern
 date:
 comments: true
 ---

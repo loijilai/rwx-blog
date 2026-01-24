@@ -1,6 +1,7 @@
 ---
 publish: true
 tags:
+  - Git
 date:
 comments: true
 ---
@@ -102,3 +103,7 @@ git rebase feat/login
 ## 結論
 
 當你選擇讓 Feature B 建立在 Feature A 之上，並且在送出前持續 rebase，就達到了：**兩個 feature 同時開發、彼此依賴、又能夠分開 review增加可讀性**。
+
+# References
+
+[Smaller & Faster Code Review with Stacked Merge Request | by Irsyad Rizaldi | Inside Bukalapak | Medium](https://medium.com/inside-bukalapak/smaller-faster-code-review-with-stacked-merge-request-1dc130705bc1)

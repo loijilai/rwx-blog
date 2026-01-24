@@ -1,6 +1,7 @@
 ---
 publish: true
 tags:
+  - csharp
 date:
 ---
 `nullable<T>`一定要是value type，reference type本來就可以為null，optional string只是增加編譯時期的檢查。

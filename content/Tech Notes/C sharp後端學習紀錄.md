@@ -96,11 +96,3 @@ Debug
 	      .WithTracing(builder => builder.AddConsoleExporter()) 
 	      .WithMetrics(builder => builder.AddConsoleExporter());
    ```
-
-# 學習方法調整
-
-1. 先混亂再整理，而非先理解再實作
-	* 工作以後才發現這種學習模式：模仿 -> 實作 -> 發現規則 -> 理解
-	* 既有的程式庫就是最好的老師，幾乎所有問題都可以找到，像是讀取設定檔、call其他服務要怎麼寫等等
-2. 定期整理gpt的聊天記錄，整理成blog post
-3. 如果學習的內容是觀念，做一個小例子驗證，確保自己能夠教人才算是懂

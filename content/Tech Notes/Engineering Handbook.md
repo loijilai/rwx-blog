@@ -21,7 +21,7 @@ date:
 	- [x] copilot
 	- [x] Run docker file
 	- [x] toggle solution explorer
-- [ ] ELK https://youtu.be/hO7HBVZJX_Q?si=xotRPIjZ_ZXBlq8f
+- [ ] [[Elasticsearch]] https://youtu.be/hO7HBVZJX_Q?si=xotRPIjZ_ZXBlq8f
 - [ ] git & source tree [https://gitbook.tw/](https://gitbook.tw/)
 - [ ] postman
 ## 資料庫

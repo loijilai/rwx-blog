@@ -2,6 +2,7 @@
 title: 如何在mysql實作「多層相依的」弱實體
 publish: true
 tags:
+  - SQL
 date: 2025-03-28
 ---
 

@@ -1,6 +1,7 @@
 ---
 publish: true
 tags:
+  - csharp
 date:
 ---
 ## 基本原則

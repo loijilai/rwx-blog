@@ -1,6 +1,7 @@
 ---
 publish: true
 tags:
+  - SQL
 date: 2026-01-20
 comments: true
 ---
