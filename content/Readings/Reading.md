@@ -2,7 +2,7 @@
 title: Reading
 publish: true
 tags:
-date: 2025-10-16
+date:
 ---
  
 我閱讀的方向就是自己當前最感興趣的主題，這些是我探索的紀錄。

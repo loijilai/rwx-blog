@@ -11,7 +11,7 @@ date:
 # 我可以進步的清單
 
 ## 工具使用
-- [ ] Linq
+- [x] [[LINQ 練習題]]
 - [x] Visual studio
 	- [x] 跳轉implementation
 	- [x] 檔案路徑 (ctrl ,)
@@ -21,7 +21,7 @@ date:
 	- [x] copilot
 	- [x] Run docker file
 	- [x] toggle solution explorer
-- [ ] ELK
+- [ ] ELK https://youtu.be/hO7HBVZJX_Q?si=xotRPIjZ_ZXBlq8f
 - [ ] git & source tree [https://gitbook.tw/](https://gitbook.tw/)
 - [ ] postman
 ## 資料庫
