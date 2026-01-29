@@ -70,7 +70,7 @@ date:
 3. [[GraphQL 核心觀念]]
 
 Feature
-1. Consume Kafka 並寫入 MongoDB
+1. Consume Kafka 並寫入 MongoDB ([[Kafka 入門：為什麼它能讓微服務解耦、又快又穩]])
 2. Redis
 3. 回傳搜尋結果: [[SQL correlated subquery效能優化]], pagination, [[Strategy Pattern：從違反 SOLID 到符合設計原則]]
 

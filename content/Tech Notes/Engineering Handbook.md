@@ -22,14 +22,18 @@ date:
 	- [x] Run docker file
 	- [x] toggle solution explorer
 - [ ] [[Elasticsearch]] https://youtu.be/hO7HBVZJX_Q?si=xotRPIjZ_ZXBlq8f
-- [ ] git & source tree [https://gitbook.tw/](https://gitbook.tw/)
+- [x] git & source tree [https://gitbook.tw/](https://gitbook.tw/)
 - [ ] postman
+- [ ] AI
+	* https://www.kdnuggets.com/finding-meaningful-work-in-the-age-of-vibe-coding
+	- https://www.scotthyoung.com/blog/2025/11/12/vibe-coding-future-work/
 ## 資料庫
-- [ ] mssql [https://youtu.be/SSKVgrwhzus?si=Luq0OL3ckEys6JAl](https://youtu.be/SSKVgrwhzus?si=Luq0OL3ckEys6JAl)
-- [ ] SQL server management studio
-- [ ] kafka
+- [x] [[Kafka 入門：為什麼它能讓微服務解耦、又快又穩]]
 - [ ] mongoDB
-- [ ] redis
+- [ ] Redis: 要設定哪些Key？要存什麼Value？要用什麼Redis data structure？要怎麼設定expire time？要怎麼配合業務流程取用和更新資料以達成某種功能？
+- [ ] mssql [https://youtu.be/SSKVgrwhzus?si=Luq0OL3ckEys6JAl](https://youtu.be/SSKVgrwhzus?si=Luq0OL3ckEys6JAl)
+- [x] SQL server management studio
+
 ## 工程素養(設計)
 - [ ] OpenAPI [https://learn.openapis.org](https://learn.openapis.org/)
 - [ ] [[Csharp Clean Code]]
