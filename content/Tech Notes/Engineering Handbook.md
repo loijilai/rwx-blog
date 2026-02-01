@@ -21,7 +21,7 @@ date:
 	- [x] copilot
 	- [x] Run docker file
 	- [x] toggle solution explorer
-- [ ] [[Elasticsearch]] https://youtu.be/hO7HBVZJX_Q?si=xotRPIjZ_ZXBlq8f
+- [ ] [[Elasticsearch]] [Beginner's Crash Course to Elastic Stack - Part 1: Intro to Elasticsearch and Kibana (youtube.com)](https://www.youtube.com/watch?v=gS_nHTWZEJ8)
 - [x] git & source tree [https://gitbook.tw/](https://gitbook.tw/)
 - [ ] postman
 - [ ] AI
@@ -35,7 +35,7 @@ date:
 - [x] SQL server management studio
 
 ## 工程素養(設計)
-- [ ] OpenAPI [https://learn.openapis.org](https://learn.openapis.org/)
+- [x] OpenAPI [https://learn.openapis.org](https://learn.openapis.org/)
 - [ ] [[Csharp Clean Code]]
 	- [ ] OOP & Design pattern
 	- [ ] API design
@@ -44,6 +44,7 @@ date:
 	- 這次有遇到[[Cache design]]的問題
 	- [[系統設計目錄頁]]
 - [ ] Mircroservice [.NET Microservices. Architecture for Containerized .NET Applications - .NET | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/architecture/microservices/)
+- [ ] [简介 · ddia-cn (gitbooks.io)](https://vonng.gitbooks.io/ddia-cn/content/)
 
 ## Domain & system big picture
 - [ ] 不知道目前在維護的系統到底長什麼樣子
@@ -63,3 +64,4 @@ date:
 	* 每個commit要小，這樣reviewer才知道要怎麼review
 	* 發MR之前要確定可以compile + test
 	* YAGNI: 要克制自己不要去修其他東西，專注在這次需求的交付就好
+	* 可以問 mentor：建議這樣改的原因是什麼？code的意圖要明顯易懂，先從意圖開始思考
