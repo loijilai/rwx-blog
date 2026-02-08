@@ -19,7 +19,7 @@ date:
 ## 工程素養(設計)
 - [ ] [[Csharp Clean Code]]
 	- [ ] OOP & Design pattern
-	- [ ] API design
+	- [ ] API design <- 我最弱的
 	- [ ] Error handling
 - [ ] [System Design Interview – An Insider's Guide](https://www.tenlong.com.tw/products/9798664653403)
 	- 這次有遇到[[Cache design]]的問題
