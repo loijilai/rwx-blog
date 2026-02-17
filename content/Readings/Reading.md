@@ -11,7 +11,7 @@ date:
 2. 快思慢想 by Daniel Kahneman
 
 # 2026
-1. [[隨機騙局]] by Nassim Nicholas Taleb
+1. [[隨機騙局：面對不確定性的態度]] by Nassim Nicholas Taleb
 
 # 2025
  

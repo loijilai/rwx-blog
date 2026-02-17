@@ -5,7 +5,7 @@ tags:
 date:
 comments: true
 ---
-這篇文章會收集一系列 LINQ 題目與解法。以下是第一題。
+這篇文章會收集一系列 LINQ 題目與解法。
 
 ---
 ## 題目 1：把「多對多」資料反轉成 Dictionary
@@ -191,3 +191,19 @@ g.Select(x => x.ProductId) // 100, 200, 100
   "2": [100]
 }
 ```
+
+##  ToLookup, GroupBy, ToDictionary
+
+[[C#] ToLookup, GroupBy, ToDictionary簡單介紹 | 愛流浪的小風 - 點部落 (dotblogs.com.tw)](https://dotblogs.com.tw/kirkchen/2011/07/16/toolookup_groupby_todicionary_introduction)
+
+`ToLookup` 是立即分組的 one-to-many 查詢結構，適合後續多次依 key 查詢資料
+
+你可以把它腦中翻譯成：
+`Dictionary<TKey, List<TValue>>`
+
+但型別是：
+`ILookup<TKey, TValue>`
+
+快速複習：
+1. ToLookup立即執行，GroupBy延遲執行
+2. ToLookup的key可以重複，ToDictionary不行；Key 不存在時，ToLookup會回傳空集合，ToDictionary會丟 exception

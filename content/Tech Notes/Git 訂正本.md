@@ -69,3 +69,75 @@ comments: true
 2. 問題同上，那`git pull`呢？  
 	* Answer: `git pull` = `git fetch` + `git merge <目前 branch 的 upstream branch>`
 	* 所以從第一點知道，`git fetch`是全部的branch都會fetch，但是`git merge`只會merge「目前 branch 所追蹤的 upstream branch」
+
+### `git reflog` (reference log)
+
+#### 怎麼看
+
+	你會看到類似這樣的輸出：
+
+	```
+	a1b2c3d HEAD@{0}: reset: moving to HEAD~1 
+	d4e5f6g HEAD@{1}: commit: add login api 
+	h7i8j9k HEAD@{2}: checkout: moving from main to feature/login
+	```
+
+| 部分                          | 意思                   |
+| --------------------------- | -------------------- |
+| `a1b2c3d`                   | 當時 HEAD 指向的 commit   |
+| `HEAD@{1}`                  | reflog 索引（時間序，0 是最新） |
+| `reset / commit / checkout` | 你做了什麼事               |
+
+#### 怎麼用
+
+* 情境 1：`git reset --hard` 之後後悔
+	
+	`git reset --hard HEAD~1`
+	
+	_幹，我要那個 commit_
+	
+	解法：
+	
+	`git reflog`
+	
+	找到 reset 前的那一筆，例如：
+
+	`d4e5f6g HEAD@{1}: commit: add login api`
+
+	救回來：
+
+	`git reset --hard d4e5f6g`
+
+
+* 情境 2：分支刪掉了
+	`git branch -D feature/login`
+
+	解法：
+
+	`git reflog`
+
+	找到那個分支最後的 commit：
+
+	`h7i8j9k HEAD@{3}: commit: finish login feature`
+
+	救分支：
+
+	`git checkout -b feature/login h7i8j9k`
+
+* 情境 3：rebase 完全亂掉
+
+	`git rebase main`
+
+	結果衝突解到有問題。
+
+	解法：
+
+	`git reflog`
+
+	找到 rebase 前那筆：
+
+	`x1x2x3x HEAD@{5}: checkout: moving from main to feature`
+
+	回去：
+
+	`git reset --hard x1x2x3x`

@@ -5,7 +5,9 @@ date:
 ---
 # TODO
 [[JWT 驗證與授權]]
+
 [[Rest API design]]
+
 [[Result pattern]]
 
 # 基礎學習內容
@@ -13,7 +15,7 @@ date:
 以下是我用C#和Asp.Net core進行後端開發的學習紀錄。
 
 1. C# basic  
-	* [[null 合併運算子]]
+	* [[null 合併運算子 (null-coalescing operator)]]
 	* https://youtu.be/GhQdlIFylQ8?si=cr4g7qeQs-98qtFv
 2. ASP.NET Core  
    [ASP.NET Core Full Course For Beginners (youtube.com)](https://www.youtube.com/watch?v=AhAxLiGC7Pc)
@@ -68,6 +70,7 @@ date:
 1. 當Api A需要呼叫Api B取得資料，就需要用到[[如何使用HttpClient呼叫其他服務]]
 2. [[Result pattern]]
 3. [[GraphQL 核心觀念]]
+4. 
 
 Feature
 1. Consume Kafka 並寫入 MongoDB ([[Kafka 入門：為什麼它能讓微服務解耦、又快又穩]])
