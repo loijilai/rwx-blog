@@ -11,6 +11,7 @@ tags:
 > ▶️ 入口
 > * [[Reading]] 閱讀紀錄與分享
 > * [[Reflections/]] 思考的紀錄
+> * [[一個痛點，一個解法：文章、軟體、流程]]
 > * [[Engineering Handbook]] 人生中第一份工作，非常混亂
 
 
