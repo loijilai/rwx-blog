@@ -15,7 +15,8 @@ date:
 - [ ] [[Elasticsearch]] [Beginner's Crash Course to Elastic Stack - Part 1: Intro to Elasticsearch and Kibana (youtube.com)](https://www.youtube.com/watch?v=gS_nHTWZEJ8)
 - [ ] mongoDB
 - [ ] Redis: 要設定哪些Key？要存什麼Value？要用什麼Redis data structure？要怎麼設定expire time？要怎麼配合業務流程取用和更新資料以達成某種功能？
-- [ ] mssql [https://youtu.be/SSKVgrwhzus?si=Luq0OL3ckEys6JAl](https://youtu.be/SSKVgrwhzus?si=Luq0OL3ckEys6JAl)
+- [ ] mssql
+	- [ ] index (storage): https://youtu.be/SSKVgrwhzus?si=xBOxtPeqmFVwmRsc&t=68741
 
 ## 工程素養(設計)
 - [ ] [[Csharp Clean Code]]

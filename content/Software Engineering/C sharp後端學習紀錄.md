@@ -65,25 +65,19 @@ date:
 
 # 實務開發學習內容
 
-12月-1月
-
+API, Distributed System
 1. 當Api A需要呼叫Api B取得資料，就需要用到[[如何使用HttpClient呼叫其他服務]]
-2. [[Result pattern]]
-3. [[GraphQL 核心觀念]]
-4. 
-
-Feature
-1. Consume Kafka 並寫入 MongoDB ([[Kafka 入門：為什麼它能讓微服務解耦、又快又穩]])
-2. Redis
-3. 回傳搜尋結果: [[SQL correlated subquery效能優化]], pagination, [[Strategy Pattern：從違反 SOLID 到符合設計原則]]
-
-Deploy
-1. Check DB connection string
-2. Build CI pipeline
-
-Debug
-1. Logging關鍵點 + try-catch配合運用
-2. Kafka replay + ELK 排查
+2. [[GraphQL 核心觀念]], [[GraphQL 的「Graph」到底是什麼？為什麼會有 N+1 問題？]]
+3. [[商品清單 API 設計：支援 price + created_at 多欄位排序的 Cursor Pagination]]
+4. [[異常處理：多層呼叫情境下 try-catch 該放哪裡？]]
+5. [[Kafka 入門：為什麼它能讓微服務解耦、又快又穩]]
+6. 10. [[OAuth 2.0 中 client_secret 何時需要？從實際開發情境理解設計原理]]
+DB
+7. [[資料頁、索引與查詢效能：從資料儲存談起]]
+8. [[SQL correlated subquery效能優化]]
+9. [[SQL injection in LIKE pattern]]
+Programming Language
+10. [[Strategy Pattern：從違反 SOLID 到符合設計原則]]
 
 # 困難點
 1. DB design (constraint, index)
