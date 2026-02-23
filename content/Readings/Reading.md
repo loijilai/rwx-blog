@@ -12,6 +12,7 @@ date:
 
 # 2026
 1. [[隨機騙局——面對不確定性的態度]] by Nassim Nicholas Taleb
+2. [[點子就要秀出來]] by Austin Kleon
 
 # 2025
  
