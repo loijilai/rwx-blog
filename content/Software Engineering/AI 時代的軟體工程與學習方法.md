@@ -1,6 +1,7 @@
 ---
 publish: true
 tags:
+  - AI
 date: 2026-02-08
 comments: true
 ---

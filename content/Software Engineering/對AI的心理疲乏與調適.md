@@ -1,6 +1,7 @@
 ---
 publish: true
 tags:
+  - AI
 date:
 comments: true
 ---

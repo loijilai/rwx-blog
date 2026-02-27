@@ -2,7 +2,7 @@
 publish: true
 tags:
   - C-programming
-date:
+date: 2025-09-01
 ---
 # 本篇目標
 

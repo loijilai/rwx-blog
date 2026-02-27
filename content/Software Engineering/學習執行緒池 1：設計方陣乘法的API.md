@@ -2,7 +2,7 @@
 publish: true
 tags:
   - C-programming
-date:
+date: 2025-09-01
 ---
 學習多執行緒最好的方式就是直接實作一個小專案，在這邊我參考台大資工系統程式設計課的其中一個作業：實作一個多執行緒的方陣乘法器 ([Programming HW4 - Matrix Multiplication Machine - HackMD](https://hackmd.io/@kcwayne/sp2024_hw4#Receiving-requests))，有興趣可以直接看這個spec挑戰看看。
 
