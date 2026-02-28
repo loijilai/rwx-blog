@@ -14,6 +14,15 @@ date:
 1. [[隨機騙局——面對不確定性的態度]] by Nassim Nicholas Taleb
 2. [[點子就要秀出來]] by Austin Kleon
 
+## Technical Reading
+
+- [x] 二月：C# clean code
+	* 閱讀心得：不推這本書，很多內容都很舊，直接看microsoft document更好
+	* Error handling: https://learn.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions
+	* API design: https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design
+* 三月：DDIA
+* 四月：[System Design Interview – An Insider's Guide](https://www.tenlong.com.tw/products/9798664653403)
+
 # 2025
  
  1. 卡片盒筆記法 by Sönke Ahrens ❤️  

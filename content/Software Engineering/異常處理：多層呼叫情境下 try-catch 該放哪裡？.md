@@ -5,7 +5,9 @@ date: 2026-01-22
 ---
 ## 前言
 
-在實務開發中，`try-catch` 最常被問的不是語法怎麼寫，而是「一段流程有好幾層呼叫，到底要 catch 幾次？」有些人習慣在每個方法都包一層，理由是「比較安全」。但這種寫法最後通常會導致兩個問題：第一，錯誤被重複紀錄，log 變得又吵又難查；第二，更嚴重的是錯誤被吃掉，系統表面上正常，實際上資料漏寫或流程半套完成。
+在實務開發中，`try-catch` 最常被問的不是語法怎麼寫，而是「一段流程有好幾層呼叫，到底要 catch 幾次？」
+
+在每個方法都包一層，這種寫法最後通常會導致兩個問題：第一，錯誤被重複紀錄，log 變得又吵又難查；第二，更嚴重的是錯誤被吃掉，系統表面上正常，實際上資料漏寫或流程半套完成。
 
 這篇文章的重點不在於介紹 `try-catch` 的語法，而是針對「多層呼叫」這種最常見的後端情境，建立一套清楚的異常處理分工。你會看到什麼情況應該讓例外往上拋，什麼情況需要在內層就攔住，以及每一層攔住例外時應該採取什麼策略。
 
@@ -27,7 +29,7 @@ date: 2026-01-22
 
 ## 外層 try-catch：系統邊界負責「統一收斂」
 
-外層通常是 Controller 或 Handler。它的責任不是處理每一種錯誤，而是把未知的例外「收斂」成一致的 API 行為，例如回傳 `500`，同時記錄必要的 request context。
+整個call chain的最外層通常是 Controller 或 Handler。它的責任不是處理每一種錯誤，而是把未知的例外「收斂」成一致的 API 行為，例如回傳 `500`，同時記錄必要的 request context。
 
 在邊界層包 try-catch 的核心原因是：
 
@@ -102,11 +104,15 @@ public async Task<Guid> CreateOrderAsync(CreateOrderRequest request)
 
 ---
 
-## 為什麼需要內層的 try-catch？：只有在「失敗可被隔離」時才合理
+## 最內層為什麼需要 try-catch？：只有在「失敗可被隔離」時才合理
 
-> 為什麼外層已經有try-catch，內層還要再寫一次try-catch？
+接著我們進入最內層的`TrySendEmailAsync`，注意這裡還有再用一次 try-catch 。
 
-注意這裡的`TrySendEmailAsync` 內層還有再用一次 try-catch 。看到這裡，你可能會問：既然外層（Controller / Handler）已經有異常處理了，為什麼內層還需要再包一個 `try-catch`？這不是重複嗎？答案在於多層呼叫時，不同層級的異常處理其實肩負不同目的。外層負責把整體流程的失敗「收斂」成一致的系統行為；內層則負責把某些錯誤「隔離」，避免可降級功能拖垮核心流程。
+看到這裡，你可能會問：
+
+> 既然外層（Controller / Handler）已經有異常處理了，為什麼內層還需要再包一個 `try-catch`？這不是重複嗎？
+
+答案在於多層呼叫時，不同層級的異常處理其實肩負不同目的。外層負責把整體流程的失敗「收斂」成一致的系統行為；內層則負責把某些錯誤「隔離」，避免可降級功能拖垮核心流程。
 
 ```csharp
 private async Task TrySendEmailAsync(Guid orderId, string email)
@@ -122,7 +128,7 @@ private async Task TrySendEmailAsync(Guid orderId, string email)
     }
 }
 ```
-### 業務邏輯的獨立性
+### 理由一、業務邏輯的獨立性
 
 在下單流程中，「寄出確認信」是一個附加功能。使用者下單時系統執行的核心動作是寫入訂單並完成請款；寄信只是讓體驗更完整，並不應該成為訂單是否成立的判準。換句話說，寄信成功與否不應該影響主要交易流程。
 
@@ -130,23 +136,23 @@ private async Task TrySendEmailAsync(Guid orderId, string email)
 
 因此，內層 try-catch 的核心價值不是保護程式不要拋錯，而是保護「核心流程」不要被「附加功能」綁架。
 
+### 理由二、錯誤追蹤的精確性
+
+內層 `try-catch` 也能提供更精準的錯誤追蹤。如果例外被外層捕捉，你的 log 可能只會留下「CreateOrder unexpected error」之類的通用訊息，雖然有 userId，但你仍需要花時間判斷到底是寫 DB 壞掉、金流壞掉，還是寄信壞掉。
+
+相反地，在 `TrySendEmailAsync` 內層捕捉異常時，你可以直接在 log 中標示「寄送確認信失敗」，並附上 `orderId`、`email` 等上下文。這會讓 on-call 或開發者在排查時立即命中問題區段，把時間花在真正需要修復的地方，而不是先猜錯誤發生在哪。
+
 ### 錯誤處理策略的差異
 
 外層的異常處理通常採取「全有或全無」的策略。也就是說，只要整體流程中出現未被處理的例外，就把整個請求當作失敗處理，記錄 log 並回傳標準化錯誤。這個策略適合面對關鍵性錯誤，例如請款失敗、寫入資料庫失敗、必要欄位缺失，因為這些狀況下確實不應該讓交易看起來成功。
 
 內層的異常處理則採取「最大努力」的策略。寄信失敗時，系統仍然讓下單流程完成，並把寄信失敗記錄下來，後續可以靠重試機制、補寄任務或客服人工處理補救。這種策略確保核心交易具備可用性，也讓系統具備韌性：即使某些非核心服務短暫故障，主要業務仍能持續運作。
 
-### 錯誤追蹤的精確性
-
-內層 `try-catch` 也能提供更精準的錯誤追蹤。如果例外被外層捕捉，你的 log 可能只會留下「CreateOrder unexpected error」之類的通用訊息，雖然有 userId，但你仍需要花時間判斷到底是寫 DB 壞掉、金流壞掉，還是寄信壞掉。
-
-相反地，在 `TrySendEmailAsync` 內層捕捉異常時，你可以直接在 log 中標示「寄送確認信失敗」，並附上 `orderId`、`email` 等上下文。這會讓 on-call 或開發者在排查時立即命中問題區段，把時間花在真正需要修復的地方，而不是先猜錯誤發生在哪。
-
 ---
 
-## catch 與 catch (Exception ex) 的差異
+## 補充：catch 與 catch (Exception ex) 的差異
 
-在設計內層的異常處理時，還有一個很容易被忽略、但影響非常實際的細節：你應該使用 `catch`，還是 `catch (Exception ex)`？這兩者看起來只有一點點語法差異，實際上差很多。
+在設計內層的異常處理時，還有一個很容易被忽略的細節：你應該使用 `catch`，還是 `catch (Exception ex)`？這兩者看起來只有一點點語法差異，實際上差很多。
 
 當你使用不帶參數的 `catch` 時，確實能攔住例外，流程也會如你預期繼續往下走。但代價是你拿不到例外物件本身，也就拿不到錯誤訊息、堆疊追蹤、inner exception 等診斷資訊。這代表你在記錄 log 的時候只能寫一段固定文字，最多帶上一些業務參數，卻無法包含「到底哪裡壞掉」。
 
@@ -173,6 +179,27 @@ System.Net.Http.HttpRequestException: Connection refused
 這種 log 在第一時間就能告訴你，問題是 HTTP 連線被拒絕，方向立刻縮小成「網路連線」或「服務可用性」而不是程式邏輯。
 
 因此，除非你有明確理由不記錄例外（幾乎很少成立），否則在任何會寫 log 的情境下，都應該使用 `catch (Exception ex)`，把例外資訊保留下來。
+
+
+## 補充：不要throw ex;
+
+`throw ex;` 會讓Stack trace消失。
+
+正確做法是：
+1. 直接`throw;`
+2. 用自訂 Exception 包裝（保留 InnerException），例子如下：
+
+如果你需要**加上商業語意**，就用包裝方式。
+```csharp
+try  
+{  
+    DoSomething();  
+}  
+catch (Exception ex)  
+{  
+    throw new MyOuterException("建立訂單失敗", ex);  
+}
+```
 
 ---
 ## 結論：異常處理的設計原則
@@ -202,3 +229,7 @@ System.Net.Http.HttpRequestException: Connection refused
 記錄異常時，除了例外本身，也應該包含當時的業務上下文。例外告訴你「發生了什麼錯」，上下文告訴你「這個錯發生在哪一筆業務資料上」。
 
 以本文案例來說，內層 log 應該至少包含 `orderId`、`email` 等資訊，外層 log 則應該包含 `userId`、request payload 或 trace id 等，以利跨服務追查。這些上下文資訊能幫助你快速重現問題、判斷問題是偶發還是系統性的，並且在資料量大、服務多的環境下依然可以有效定位。
+
+# Rerferences
+
+https://learn.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions
