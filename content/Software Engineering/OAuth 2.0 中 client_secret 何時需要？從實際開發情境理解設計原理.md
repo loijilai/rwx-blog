@@ -6,9 +6,17 @@ comments: true
 ---
 在實際開發中，許多工程師第一次接觸 OAuth 2.0 時，往往是在串接第三方登入或 API。
 
-例如你正在開發一個網站，想讓使用者使用 Google 帳號登入；或你正在做一個前端單頁應用（SPA），需要呼叫某個受保護的 API。當你到授權平台註冊應用時，系統會給你兩個值：`client_id` 與 `client_secret`。
+例如你正在開發一個網站，想讓使用者使用 Google 帳號登入；或你正在做一個前端單頁應用（SPA），需要呼叫某個受保護的 API。
 
-此時常見的疑問是：既然官方提供了 client_secret，為什麼純前端應用卻不能使用它？如果沒有 client_secret，授權伺服器又怎麼知道這是一個合法註冊的應用？
+## 前情提要
+
+在你開始跑 OAuth2.0 protocol flow之前，你的應用程式（client）必須先在 Authorization Server 那邊登記過。
+
+舉個實際的例子，你需要先到 Google Cloud Platform 註冊一個OAuth2.0 Client，這個 Client 就是你正在開發的網站，而 GCP 在這裡就是 Authorization Server的角色。註冊的階段需要填入 Client Type、Redirect URL，註冊完畢後，GCP 會給你兩個值：`client_id` 與 `client_secret`。
+
+> 這步驟很關鍵，不是臨時出現一個 App 就能直接來要 token，註冊是讓 Authorization Server 知道有這個 Client 要來使用第三方登入的功能
+
+此時常見的疑問是：這個 client_secret 什麼時候使用？為什麼純前端應用卻不能使用它？如果沒有 client_secret，授權伺服器又怎麼知道這是一個合法註冊的應用？
 
 要回答這些問題，必須回到 OAuth 2.0 的官方規範。
 
@@ -57,32 +65,6 @@ Source: [RFC 6749 - The OAuth 2.0 Authorization Framework (ietf.org)](https://da
 問題就出現在這裡：交換 access token 時（步驟C和D）是否需要帶 client_secret？
 
 ---
-## 前情提要
-
-在你開始跑「Authorization Request → Code → Token」那整套protocol flow之前，
-
-你的應用程式（client）必須先在 Authorization Server 那邊登記過。
-
-> 不是臨時出現一個 App 就能直接來要 token。
-
-```
-### （前置）
-
-Client Registration  
-↓  
-取得 client_id / client_secret
-
-### （正式 OAuth flow）
-
-Authorization Request  
-↓  
-Authorization Grant  
-↓  
-Access Token  
-↓  
-Access Resource (Google Photos API)
-```
-
 ## 官方規範如何定義 Client 類型
 
 RFC 6749 第 2.1 節將 Client 分為兩種：
@@ -124,3 +106,9 @@ redirect URI 的精準匹配是 OAuth 安全模型的重要部分。它確保授
 OAuth 2.0 並不是要求所有 Client 都必須透過 client_secret 驗證身份。相反地，規範清楚區分了能安全保存秘密的應用與無法保存秘密的應用。對於 Public Client，授權伺服器透過 client_id、redirect URI 精準匹配，以及 PKCE 等機制來維持流程安全，而不是透過 client_secret。
 
 理解這一點，可以幫助你在設計 OAuth 架構時做出正確的安全決策，也能避免在前端應用中錯誤地暴露敏感資訊。
+
+# References
+
+[彻底理解 OAuth2 协议](https://www.youtube.com/watch?v=T0h6A-M_WmI)
+
+[OAuth 2.0 and OpenID Connect (in plain English)](https://www.youtube.com/watch?v=996OiexHze0)
