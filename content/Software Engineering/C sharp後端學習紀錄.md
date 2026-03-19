@@ -62,24 +62,7 @@ date:
 4. [Git/GitHub/GitLab完全教程（包括Git底层原理） | Udemy](https://www.udemy.com/course/git-basic/?couponCode=KEEPLEARNING)
 	* [[Git 訂正本]]
 5. [[JWT 驗證與授權]]
-
-# 實務開發學習內容
-
-API, Distributed System
-1. 當Api A需要呼叫Api B取得資料，就需要用到[[如何使用HttpClient呼叫其他服務]]
-2. [[GraphQL 核心觀念]], [[GraphQL 的「Graph」到底是什麼？為什麼會有 N+1 問題？]]
-3. [[商品清單 API 設計：支援 price + created_at 多欄位排序的 Cursor Pagination]]
-4. [[異常處理：多層呼叫情境下 try-catch 該放哪裡？]]
-5. [[Kafka 入門：為什麼它能讓微服務解耦、又快又穩]]
-6. 10. [[OAuth 2.0 中 client_secret 何時需要？從實際開發情境理解設計原理]]
-
-DB
-1. [[資料頁、索引與查詢效能：從資料儲存談起]]
-2. [[SQL correlated subquery效能優化]]
-3. [[SQL injection in LIKE pattern]]
-
-Programming Language
-1. [[Strategy Pattern：從違反 SOLID 到符合設計原則]]
+6. [[如何使用HttpClient呼叫其他服務]]
 
 # 困難點
 1. DB design (constraint, index)

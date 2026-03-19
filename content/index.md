@@ -21,14 +21,18 @@ tags:
 我持續的把工作上遇到的問題，整理成有系統性的學習文章，保持學習的動能。
 
 #### 後端基礎
+* [[GraphQL 核心觀念]]
 - [[GraphQL 的「Graph」到底是什麼？為什麼會有 N+1 問題？]]
 - [[OAuth 2.0 中 client_secret 何時需要？從實際開發情境理解設計原理]]
 - [[商品清單 API 設計：支援 price + created_at 多欄位排序的 Cursor Pagination]]
 - [[異常處理：多層呼叫情境下 try-catch 該放哪裡？]]
 - [[Strategy Pattern：從違反 SOLID 到符合設計原則]]
+- [[用網路排查工具建立正確的網路心智模型]]
 
 #### 資料庫與分散式系統
 - [[SQL correlated subquery效能優化]]
+- [[資料頁、索引與查詢效能：從資料儲存談起]]
+* [[SQL injection in LIKE pattern]]
 - [[Kafka 入門：為什麼它能讓微服務解耦、又快又穩]]
 
 #### 交付流程、可維護性與團隊協作
@@ -72,7 +76,7 @@ tags:
 * 當前的閱讀：[[Reading]]
 * [[培養閱讀習慣的訣竅]]
 * [[如何持續投資自己的知識組合]]
-> * [[Reflections/]] 思考的紀錄
+* [[Reflections/]] 思考的紀錄
 
 ## 個人入口
 
