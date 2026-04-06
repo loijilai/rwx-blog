@@ -13,6 +13,8 @@ date:
 # 2026
 1. [[隨機騙局——面對不確定性的態度]] by Nassim Nicholas Taleb
 2. [[點子就要秀出來]] by Austin Kleon
+3. 生存所需的行政事務 by 坂口恭平
+4. [[數位形象力]] by Cynthia Johnson
 
 ## Technical Reading
 
@@ -21,9 +23,10 @@ date:
 	* 閱讀心得：不推這本書，很多內容都很舊，直接看microsoft document更好
 	* Error handling: https://learn.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions
 	* API design: https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design
-* 三月：DDIA
-* 四月：[System Design Interview – An Insider's Guide](https://www.tenlong.com.tw/products/9798664653403)
-* 五月：A philosophy of software design 
+- [x] 三月：DDIA ch1 - 4
+* 四月：DDIA ch5 - 8
+* 五月：[System Design Interview – An Insider's Guide](https://www.tenlong.com.tw/products/9798664653403)
+* 六月：A philosophy of software design 
 
 # 2025
  

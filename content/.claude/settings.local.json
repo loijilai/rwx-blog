@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//private/tmp/**)",
+      "Bash(unzip -q \"/Users/laichenglin/Downloads/青年百億計畫/海外翱翔組其他文件\\(115年第二梯次\\).odt\" -d odt1_extract)",
+      "Bash(rm -rf odt1_extract odt2_extract)",
+      "Bash(unzip -q \"/Users/laichenglin/Downloads/青年百億計畫/海外翱翔組報名文件\\(115年第二梯次\\).odt\" -d odt2_extract)",
+      "Bash(sed \"s/&#[0-9]*;//g\")",
+      "Read(//tmp/**)",
+      "Bash(unzip -p \"海外翱翔組報名文件\\(115年第二梯次\\).odt\" content.xml)",
+      "WebSearch",
+      "WebFetch(domain:twpathfinder.org)",
+      "Bash(python3 -c \":*)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(claude mcp:*)",
+      "Bash(uvx awslabs.aws-documentation-mcp-server@latest --help)",
+      "Bash(pip show:*)",
+      "Bash(brew list:*)",
+      "Bash(brew install:*)"
+    ]
+  }
+}
