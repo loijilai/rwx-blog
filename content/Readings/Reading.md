@@ -15,6 +15,7 @@ date:
 2. [[點子就要秀出來]] by Austin Kleon
 3. 生存所需的行政事務 by 坂口恭平
 4. [[數位形象力]] by Cynthia Johnson
+5. [[窮查理的普通常識]] by Charlie Munger
 
 ## Technical Reading
 
