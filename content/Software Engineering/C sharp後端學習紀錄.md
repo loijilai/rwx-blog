@@ -4,11 +4,8 @@ tags:
 date:
 ---
 # TODO
-[[JWT 驗證與授權]]
 
 [[Rest API design]]
-
-[[Result pattern]]
 
 # 基礎學習內容
 
@@ -26,8 +23,8 @@ date:
 3. Api design, architecture: controller, services, repository
 	* [[Rest API design]] 
 	* [[異常處理：多層呼叫情境下 try-catch 該放哪裡？]]
-
-4. SQL server & EF core
+4. 常見的網站攻擊: CSRF, XSS
+5. SQL server & EF core
 	* LINQ最基本的重要觀念：
 		1. Deferred execution
 		   e.g. 就算tracks是List，寫tracks.Select(t => t.ToDto())會變成IEnumerable而非List，除非最後加上.ToList()
@@ -35,9 +32,35 @@ date:
 		3. LINQ主要用於查詢的Query居多，像是where, select, order by, first/firstOrDefault, any, tolist
 		4. 如果要update, create, delete就要用到LINQ之餘的Add, Remove + saveChangesAsync() 這些不是IQueryable，是DbSet的操作介面。有時候兩種方法都可以做到同一件事情，像是var problem = context.Problems.FindAsync(id) vs. var problem = context.Problems.FirstorDefaultAsync(p => p.id == id)，這時候優先會選擇前者，FindAsync雖然不是IQueryable提供，但是他是專門用來查詢primary key的，而且可以利用ef core的change tracker直接回傳不用查詢DB
 	* [[LINQ 練習題]]
-5. [[Docker & Docker compose]]  
-   https://youtu.be/SXwC9fSwct8?si=7WOcEntMdszmEbLd  
-   困難點：服務之間啟用的dependency、用環境變數覆蓋appsetting、volumn與network設定(服務內部溝通要用內部網路的service name和port溝通，而不是windows/mac上面的port)
+	* Database & SQL
+		我大致上是依據Data with Baraa的[影片](https://youtu.be/SSKVgrwhzus?si=tA7NHHaUGEtopx8h)規劃的，但我不適合看影片被動學習，因此我跳過教SQL的前面12小時。
+
+		SQL我沒有看影片，而是直接寫以下這兩個題庫，不會就問AI直接做中學。
+		* https://leetcode.com/studyplan/top-sql-50/
+		* https://leetcode.com/quest/database-quest/
+	* Performance Optimization
+		此處要學習的內容是Indexes和Query Plan，因為概念性的內容比較多，我看了[Data with Baraa的影片](https://youtu.be/SSKVgrwhzus?si=3CARBc2yNvWDfOG6)的以下章節並做了筆記：
+
+		* [18:23:42](https://www.youtube.com/watch?v=SSKVgrwhzus&t=66222s) Indexes 
+		* [20:20:31](https://www.youtube.com/watch?v=SSKVgrwhzus&t=73231s) Execution Plan 
+		* [21:11:03](https://www.youtube.com/watch?v=SSKVgrwhzus&t=76263s) Partitions 
+		* [21:43:39](https://www.youtube.com/watch?v=SSKVgrwhzus&t=78219s) 30x Performance Tips
+
+	* 筆記
+		* [[資料庫效能優化1——索引基本概念]]
+		* [[資料庫效能優化2——依照儲存結構區分索引]]
+		* [[資料庫效能優化3——索引管理、執行計劃、效能優化]]
+		* [[資料庫效能優化4——分區]]
+		* [[資料庫索引實例]]
+
+	* 其餘次要內容
+		以下內容我暫時跳過。
+		* Views
+		* CTAS and Temp Tables
+		* Compare Advanced Techniques
+		* Stored Procedures
+		* Triggers
+
 6. Unit testing (xUnit + Moq)  
    * 困難點：如果沒有對app做分層，會很難測試，正確的單元測試會集中在service的部分
    * [[為什麼要寫測試？]]
@@ -61,7 +84,7 @@ date:
 	   	3. Metrics: Prometheus + Grafana
 4. [Git/GitHub/GitLab完全教程（包括Git底层原理） | Udemy](https://www.udemy.com/course/git-basic/?couponCode=KEEPLEARNING)
 	* [[Git 訂正本]]
-5. [[JWT 驗證與授權]]
+5. [[Api Authentication & Authorization 基本觀念]]
 6. [[如何使用HttpClient呼叫其他服務]]
 
 # 困難點

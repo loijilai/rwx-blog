@@ -23,7 +23,6 @@ tags:
 
 #### 資料庫與分散式系統
 - [[SQL correlated subquery效能優化]]
-- [[資料頁、索引與查詢效能：從資料儲存談起]]
 * [[SQL injection in LIKE pattern]]
 - [[Kafka 入門：為什麼它能讓微服務解耦、又快又穩]]
 

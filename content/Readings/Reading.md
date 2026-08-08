@@ -8,7 +8,6 @@ date:
 我閱讀的方向就是自己當前最感興趣的主題，這些是我探索的紀錄。
 # Current reading
 1. 逃避自由 by Erich Fromm
-2. 快思慢想 by Daniel Kahneman
 
 # 2026
 1. [[隨機騙局——面對不確定性的態度]] by Nassim Nicholas Taleb
@@ -16,6 +15,9 @@ date:
 3. 生存所需的行政事務 by 坂口恭平
 4. [[數位形象力]] by Cynthia Johnson
 5. [[窮查理的普通常識]] by Charlie Munger
+6. 平面國 by Edwin A. Abbott
+7. [[快思慢想]] by Daniel Kahneman
+8. [[不確定情況下的判斷：捷徑和偏見]] by Daniel Kahneman & Amos Tversky
 
 ## Technical Reading
 
