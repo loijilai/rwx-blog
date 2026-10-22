@@ -8,6 +8,7 @@ date:
 我閱讀的方向就是自己當前最感興趣的主題，這些是我探索的紀錄。
 # Current reading
 1. 逃避自由 by Erich Fromm
+2. [[不確定情況下的判斷：捷徑和偏見]] by Daniel Kahneman & Amos Tversky
 
 # 2026
 1. [[隨機騙局——面對不確定性的態度]] by Nassim Nicholas Taleb
@@ -17,19 +18,20 @@ date:
 5. [[窮查理的普通常識]] by Charlie Munger
 6. 平面國 by Edwin A. Abbott
 7. [[快思慢想]] by Daniel Kahneman
-8. [[不確定情況下的判斷：捷徑和偏見]] by Daniel Kahneman & Amos Tversky
+8. [[黑天鵝效應]] by Nassim Nicholas Taleb
+9. 設計你的人生 by Bill Burnett, Dave Evans
+10. 韃靼荒漠 by Dino Buzzati
+11. [[恆毅力]] by angela duckworth
+
+略讀
+1. 黑猩猩政治學 by Frans de Waal
+2. [刻意練習書摘](https://commoncog.com/peak-book-summary/)、[刻意練習書評](https://commoncog.com/the-problems-with-deliberate-practice/)
+
 
 ## Technical Reading
 
-- [x] 二月：C# clean code
-
-	* 閱讀心得：不推這本書，很多內容都很舊，直接看microsoft document更好
-	* Error handling: https://learn.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions
-	* API design: https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design
-- [x] 三月：DDIA ch1 - 4
-* 四月：DDIA ch5 - 8
-* 五月：[System Design Interview – An Insider's Guide](https://www.tenlong.com.tw/products/9798664653403)
-* 六月：A philosophy of software design 
+- [x] C# clean code 不推這本書，很多內容都很舊，直接看microsoft document更好
+- [x] DDIA ch1 - 4
 
 # 2025
  
